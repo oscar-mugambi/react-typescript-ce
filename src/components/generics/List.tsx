@@ -1,5 +1,3 @@
-import React from 'react'
-
 type ListProps<T> = T extends number | string
   ? {
       items: number[] | string[]
