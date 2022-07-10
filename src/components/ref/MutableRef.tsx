@@ -18,7 +18,11 @@ const MutableRef = () => {
     return () => stopTimer(intervalRef.current)
   }, [])
 
-  return <div>MutableRef</div>
+  return (
+    <div>
+      Timer - {timer} <button onClick={() => stopTimer(intervalRef.current)}>Stop Timer</button>
+    </div>
+  )
 }
 
 export default MutableRef
