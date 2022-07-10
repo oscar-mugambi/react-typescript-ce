@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Button from './components/Button'
 import Container from './components/Container'
@@ -10,6 +9,8 @@ import Person from './components/Person'
 import PersonList from './components/PersonList'
 import Box from './components/state/context/Box'
 import { ThemeContextProvider } from './components/state/context/ThemeContext'
+import { User } from './components/state/context/User'
+import { UserContextProvider } from './components/state/context/UserContext'
 import Status from './components/Status'
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   )
 }
