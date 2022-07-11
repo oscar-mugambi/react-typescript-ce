@@ -8,6 +8,8 @@ import Input from './components/Input'
 import Oscar from './components/Oscar'
 import Person from './components/Person'
 import PersonList from './components/PersonList'
+import Box from './components/state/context/Box'
+import { ThemeContextProvider } from './components/state/context/ThemeContext'
 import Status from './components/Status'
 
 function App() {
@@ -43,6 +45,9 @@ function App() {
       <Button handleClick={(e) => console.log(e)} />
       <Input value='' handleChange={(event) => console.log(event)} />
       <Container styles={{ border: '1px solid black', padding: '1 rem' }} />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   )
 }
