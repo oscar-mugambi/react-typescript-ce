@@ -1,17 +1,20 @@
 import React from 'react'
 
-type ListProps<T> = {
-  items: T[]
-  onClick: (item: T) => void
-}
+type ListProps<T> = T extends number | string
+  ? {
+      items: number[] | string[]
+      onClick: (item: number | string) => void
+    }
+  : {
+      items: T[]
+      onClick: (item: T) => void
+    }
 
-const List = <T extends { id: number }>({ items, onClick }: ListProps<T>) => {
+const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
   return (
     <div>
       {items.map((item) => (
-        <li key={item.id} onClick={() => onClick(item)}>
-          {item.id}
-        </li>
+        <li onClick={() => onClick(item)}>item</li>
       ))}
     </div>
   )
