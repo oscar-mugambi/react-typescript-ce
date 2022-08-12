@@ -22,8 +22,8 @@ const Users = () => {
     <div>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleLogout}>Logout</button>
-      <div>User name is</div>
-      <div>User email is</div>
+      <div>User name is {user?.name}</div>
+      <div>User email is {user?.email} </div>
     </div>
   )
 }
