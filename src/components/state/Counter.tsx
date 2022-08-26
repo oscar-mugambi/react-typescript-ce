@@ -4,19 +4,25 @@ type CounterState = {
   count: number
 }
 
-type UpdateAction = {
-  type: 'increment' | 'decrement'
-  payload: number
-}
-type ResetAction = {
-  type: 'reset'
-}
+type UpdateAction =
+  | {
+      type: 'increment' | 'decrement'
+      payload: number
+    }
+  | {
+      type: 'reset'
+    }
 
-type CounterAction = UpdateAction | ResetAction
+// type ResetAction = {
+//   type: 'reset'
+// }
+
+// type CounterAction = UpdateAction
+// type CounterAction = UpdateAction | ResetAction
 
 const initialState = { count: 0 }
 
-function reducer(state: CounterState, action: CounterAction) {
+function reducer(state: CounterState, action: UpdateAction) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + action.payload }

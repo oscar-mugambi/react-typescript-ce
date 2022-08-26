@@ -1,4 +1,3 @@
-import './App.css'
 import Button from './components/Button'
 import Container from './components/Container'
 import { Greet } from './components/Greet'
@@ -12,6 +11,7 @@ import { ThemeContextProvider } from './components/state/context/ThemeContext'
 import { User } from './components/state/context/User'
 import { UserContextProvider } from './components/state/context/UserContext'
 import Status from './components/Status'
+import './App.css'
 
 function App() {
   const personName = {
